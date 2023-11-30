@@ -11,6 +11,7 @@ public class UiManager : MonoBehaviour
 
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI menuScoreText;
     [SerializeField] private TextMeshProUGUI highScoreText;
     [SerializeField] private GameObject menuPanel;
 
@@ -22,7 +23,9 @@ public class UiManager : MonoBehaviour
 
     void Start()
     {
+       
         menuPanel.SetActive(true);
+        menuScoreText.text = "High Score: " + ScoreManager.instance.GetHighScore().ToString();
         gameOverPanel.SetActive(false);
     }
     // Update is called once per frame

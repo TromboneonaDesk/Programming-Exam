@@ -20,7 +20,11 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        
+        if (GameObject.FindGameObjectsWithTag("ScoreManager").Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(this);
     }
 
     public void IncrementScore()

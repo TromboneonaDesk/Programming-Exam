@@ -2102,6 +2102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 504300002}
   scoreText: {fileID: 2075239710}
+  menuScoreText: {fileID: 1708063273}
   highScoreText: {fileID: 622414959}
   menuPanel: {fileID: 1140466355}
 --- !u!4 &1657976628
@@ -2131,7 +2132,7 @@ GameObject:
   - component: {fileID: 1689597574}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: ScoreManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
