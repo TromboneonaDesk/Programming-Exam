@@ -39,19 +39,21 @@ public class BallController : MonoBehaviour
     }
     public void Press()
     {
-        if (!started)
-        {
-            dead = false;
-            started = true;
-            return;
-        }
+        if (!started) return;
 
         onX = !onX;
     }
     // Update is called once per frame
+    public void GameStart()
+    {
+        print("yipeee");
+        dead = false;
+        started = true;
+    }
     public void GameOver()
     {
-
+        dead = true;
+        GameManager.instance.GameOver();
     }
 
     private void OnTriggerEnter(Collider col)
@@ -65,7 +67,7 @@ public class BallController : MonoBehaviour
     void Update()
     {
         //Make the ball fall when it’s not on the platform and the game should be over.
-        if (transform.position.y < deathThresh) dead = true;
+        if (transform.position.y < deathThresh) GameOver();
         if (dead) return;
         float dt = Time.deltaTime;
         cam.transform.position = transform.position + camOffset;

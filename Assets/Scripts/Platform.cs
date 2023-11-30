@@ -18,7 +18,6 @@ public class Platform : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            print(collision.gameObject);
             yield return new WaitForSeconds(fallDelay);
             rb.constraints = RigidbodyConstraints.None;
             yield return new WaitForSeconds(destroyDelay);

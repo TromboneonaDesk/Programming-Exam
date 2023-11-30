@@ -838,8 +838,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1657976627}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 1689597574}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: GameStart
         m_Mode: 1
         m_Arguments:
@@ -1321,8 +1321,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1657976627}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 1689597574}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
@@ -2100,10 +2100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d299cf52529e6447a3780aa825425b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverPanel: {fileID: 0}
-  scoreText: {fileID: 0}
-  highScoreText: {fileID: 0}
-  MenuPanel: {fileID: 0}
+  gameOverPanel: {fileID: 504300002}
+  scoreText: {fileID: 2075239710}
+  highScoreText: {fileID: 622414959}
+  menuPanel: {fileID: 1140466355}
 --- !u!4 &1657976628
 Transform:
   m_ObjectHideFlags: 0
@@ -2777,5 +2777,5 @@ SceneRoots:
   - {fileID: 1689597575}
   - {fileID: 1657976628}
   - {fileID: 208815917}
-  - {fileID: 878248246}
   - {fileID: 1063584046}
+  - {fileID: 878248246}

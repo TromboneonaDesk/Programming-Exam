@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,22 +17,23 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void GameStart()
+    public void GameStart()
     {
+        print("1");
+        BallController.instance.GameStart();
         UiManager.instance.GameStart();
         ScoreManager.instance.StartScore();
     }
 
-    void GameOver()
+    public void GameOver()
     {
         UiManager.instance.GameOver();
         ScoreManager.instance.StopScore();
-        BallController.instance.GameOver();
     }
 
     public void Reset()
     {
-        GameStart();
+        SceneManager.LoadScene("SampleScene");
     }
 
     // Update is called once per frame

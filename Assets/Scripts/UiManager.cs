@@ -10,9 +10,9 @@ public class UiManager : MonoBehaviour
     public static UiManager instance;
 
     [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private TextMeshPro scoreText;
-    [SerializeField] private TextMeshPro highScoreText;
-    [SerializeField] private GameObject MenuPanel;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI highScoreText;
+    [SerializeField] private GameObject menuPanel;
 
     private void Awake()
     {
@@ -22,7 +22,8 @@ public class UiManager : MonoBehaviour
 
     void Start()
     {
-
+        menuPanel.SetActive(true);
+        gameOverPanel.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -31,7 +32,7 @@ public class UiManager : MonoBehaviour
     }
     public void GameStart()
     {
-        MenuPanel.SetActive(false);
+        menuPanel.SetActive(false);
         gameOverPanel.SetActive(false);
         //SceneManager.LoadScene();
         //does everything needed when loading the game. (e.g. activating/deactivating texts)
@@ -41,7 +42,7 @@ public class UiManager : MonoBehaviour
     public void GameOver()
     {
         scoreText.text = ScoreManager.instance.GetScore().ToString();
-        scoreText.text = ScoreManager.instance.GetHighScore().ToString();
+        highScoreText.text = ScoreManager.instance.GetHighScore().ToString();
         gameOverPanel.SetActive(true);
         //does anything when the game is over (e.g. activate game over Panel)   
 

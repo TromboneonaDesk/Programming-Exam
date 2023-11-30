@@ -29,7 +29,6 @@ public class PlatformManager : MonoBehaviour
 
         if (Random.Range(0,1f) > gemChance)
         {
-            print("gem");
             Gem g = Instantiate(gem, transform.position + Vector3.up, Quaternion.identity);
         }
 
